@@ -1,0 +1,19 @@
+name = "cf-workers-telegram-bot"
+main = "packages/worker/dist/worker/src/worker.mjs"
+
+workers_dev = true
+compatibility_date = "2023-10-24"
+
+build.command = "npm install && npm run build:worker"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "llama2"
+database_id = "e24eb37b-6b13-4e84-b1af-63de0dedcc6d"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "share"
